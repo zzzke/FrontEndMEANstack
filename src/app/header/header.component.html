@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+   <span><a routerLink="/">MovieHouse</a></span>
+   <span class="spacer"></span>
+  <ul>
+    <li><a mat-button  routerLink="create" routerLinkActive="mat-accent">New Post</a></li>
+    <li><a mat-button  routerLink="posts" routerLinkActive="mat-accent">Show Post</a></li>
+    <li><a mat-button (click)="socialSignIn('facebook')" routerLinkActive="mat-accent" *ngIf="!user">Login</a></li>
+    <li><a mat-button   routerLinkActive="mat-accent" *ngIf="user">Sign in as {{user.name}}</a></li>
+    <li><a mat-button  (click)="socialSignOut()" routerLinkActive="mat-accent" *ngIf="user">Logout</a></li>
+
+  </ul>
+</mat-toolbar>
